@@ -1,0 +1,30 @@
+body{
+    background:blue;
+}
+
+.card{
+    height: 15rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    background:rgba(0,0,0,0.2);
+
+    &_img{
+        background: lime;
+        height: 5rem;
+        width: 15rem;
+    }
+
+    &_p{
+        color: white;
+
+    }
+
+    &_h2{
+        color: red;
+        height:5rem;
+        width: 15rem;
+        background: maroon;
+    }
+
+}

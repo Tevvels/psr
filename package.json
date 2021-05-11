@@ -1,0 +1,26 @@
+{
+  "name": "psr",
+  "version": "1.0.0",
+  "description": "Site for my Nana",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tevvels/psr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tevvels/psr/issues"
+  },
+  "homepage": "https://github.com/Tevvels/psr#readme"
+}
