@@ -1,32 +1,4 @@
-.agent {
-  padding: 5%;
-}
-
-.cols {
-  padding-bottom: 2%;
-}
-
-.cols_image {
-  position: relative;
-  overflow: hidden;
-}
-
-.cols_desc {
-  border: 4px solid black;
-  padding: .5rem;
-  background: tan;
-}
-
-.cols_name {
-  padding-right: .5rem;
-}
-
-.cols_subColumn {
-  border: 4px solid black;
-  padding: 15px;
-  background: tan;
-  left: -5%;
-  z-index: 15;
+.community {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,5 +12,24 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+  background: tan;
+  width: 50%;
+  height: 20.5rem;
+}
+
+.community_arts, .community_history {
+  float: left;
+}
+
+.community_rec {
+  float: right;
+}
+
+.community_img {
+  height: 20.5rem;
+  width: 50%;
 }
 /*# sourceMappingURL=style.css.map */

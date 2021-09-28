@@ -1,0 +1,33 @@
+.nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ffE;
+  text-decoration: none;
+}
+
+.nav_button {
+  width: 8rem;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.nav_button:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.nav_list {
+  padding-left: 15%;
+  height: 3rem;
+}
+
+.nav_list-item {
+  text-transform: uppercase;
+  padding: 5px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */

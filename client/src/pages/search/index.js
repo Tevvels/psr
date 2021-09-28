@@ -1,86 +1,130 @@
 import React, {useState,useEffect} from 'react';
 import {useForm} from 'react-hook-form';
-import api from "../../utils/API"
+import {searchBtnData} from '../../Data/searchBtnData';
+import { Container,Row,Col,Card,Button } from 'react-bootstrap';
+import stock_minion_many from "../../Data/photos/stock_minion_many.jpg";
+
+import './style.css';
+
+const axios = require("axios").default;
 const Search = () => {
+
     const [formInput,setFormInput] = useState({});
     const {handleSubmit} = useForm();
 
+    const [advSearch, setAdvSearch] = useState(false);
+    const handleAdvSearch = () =>{
+        setAdvSearch(prev => !prev);
+    }
+   
 
    const handleInputChange = (event) => {
         const { name, value } = event.target;
         setFormInput({...formInput, [name]: value})
     }
     
+    const options = {
+        method: 'GET',
+        url: 'https://realty-mole-property-api.p.rapidapi.com/salePrice',
+        params: {
+                compCount: formInput.compCount,
+                squareFootage: formInput.squareFootage,
+                bathrooms: formInput.bathroom,
+                bedrooms: formInput.bathroom,
+                city: formInput.city,
+                county: formInput.county,
+                zipcode: formInput.zipcode,
+                price: formInput.price,
+                address: formInput.address,
+                bedrooms: formInput.bedroom,
+                propertyType: formInput.propertyType
+        },
+        headers: {
+            'x-rapidapi-key': '87e3032294msh25d302b42bf0260p193f23jsn25a17a3279f8',
+            'x-rapidapi-host': 'realty-mole-property-api.p.rapidapi.com'
+          }
+    }
 
 
-    function handleFormSubmit(r){
-        
-        api.searchHouse({
-            compCount: formInput.compCount,
-            squareFootage: formInput.squareFootage,
-            bathroom: formInput.bathroom,
-            address: formInput.address,
-            bedroom: formInput.bedroom,
-            propertyType: formInput.propertyType
-        })
+    function handleFormSubmit(event, r){
+    event.preventDefault();
+    event.stopPropagation();        
+      axios.request(options)
+
         .then(
-             r.target.reset()
+            (response)=>{
+                <div>
+                    {document.querySelector('.my_listings').innerHTML = response.data.listings.map((item,index)=>(
+                        JSON.stringify(
+                        <div>
+                            <h2>{item.address}</h2>
+                            <h2>{item.city}</h2>
+                            <h2>{item.state}</h2>
+                            
+                        </div>
+                        
+                        )
+        ))}
+                </div>
+                console.log(response.data)
+            },
+            //  r.target.reset()
         ).catch((err)=> console.log(err));
 
     }
     
     return (
-        <div>
-            <form onSubmit={handleSubmit(handleFormSubmit)}>
-                <div className={`row`}>
-                    <div className={`col`}>
-                        <input
-                        onChange={handleInputChange}
-                        type={`int`}
-                        className={`form-control`}
-                        placeholder={`1`}
-                        name={`compCount`}
-                        />
-                        <input
-                        onChange={handleInputChange}
-                        type={`int`}
-                        className={`form-control`}
-                        placeholder={`1`}
-                        name={`squareFootage`}
-                        />
-                        <input
-                        onChange={handleInputChange}
-                        type={`int`}
-                        className={`form-control`}
-                        placeholder={`1`}
-                        name={`bathroom`}
-                        />
-                        <input
-                        onChange={handleInputChange}
-                        type={`text`}
-                        className={`form-control`}
-                        placeholder={`123 main street`}
-                        name={`address`}
-                        />
-                        <input
-                        onChange={handleInputChange}
-                        type={`text`}
-                        className={`form-control`}
-                        placeholder={`single family`}
-                        name={`propertyType`}
-                        />
-                        <button
-                        className={`btn btn-submit`}
+        <div>   
+              <Card className=" text-white">
+                   <Card.Img variant="top" src={stock_minion_many} />
+                    <Card.ImgOverlay>
+                        <Card.Title>
+                            Sprague Real Estate
+                        </Card.Title>
+                        <Card.Text>
+                            Selling homes since 1987
+                        </Card.Text>
+                    </Card.ImgOverlay>
+                   <form onSubmit={handleSubmit(handleFormSubmit)}>
+                 
+                    <Row className={`col row`}>
+                    <Button>Agent</Button>
+                    <Button>Buy/Sell</Button>
+                    <Button>Community</Button>
+
+
+                            <input 
+                            type={`text`}
+                            name={`simpleSearch`}
+                            className={`form-control ${advSearch ? "" : "simpleAdv"}`}
+                            />
+                        {searchBtnData.map((item,index)=> (
+   
+                            <input
+                            key={index}
+                            onChange={handleInputChange}
+                            type={item.type}
+                            placeholder={item.name}
+                            className={`form-control ${advSearch ? "advanceSearch" : ""}`}
+                            name={item.name}
+                            />
+                            
+                          ))}
+                                              <Button variant="outline-success" onClick={handleAdvSearch}>{advSearch ? `Advance Search` : `Simple Search`}</Button>
+                        <Button
+
+                        variant={`outline-warning`}
                         onClick={handleFormSubmit}
                         type={`submit`}
-                        >
-                        Look up House?
-                        </button>
-                    </div>
-                </div>
+                        >Submit</Button>
+
+                    </Row>
+
 
             </form>
-        </div>
+            </Card>
+       </div>
+       
     )
 }
 

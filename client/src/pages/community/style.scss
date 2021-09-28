@@ -1,0 +1,25 @@
+.community{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    list-style-type: none;
+    text-decoration: none;
+    background:tan;
+    width:50%;
+    &_arts,&_history{
+        float: left;
+    }
+    &_rec{
+        float:right;
+    }
+    height: 20.5rem;
+
+
+    &_img{
+        height: 20.5rem;
+        width: 50%;
+    }
+
+}

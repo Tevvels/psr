@@ -1,0 +1,85 @@
+.contact {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0;
+  left: 75%;
+  background: white;
+  z-index: 100;
+  -webkit-box-shadow: -.2rem 0 black;
+          box-shadow: -.2rem 0 black;
+  height: 100vh;
+  width: 25vw;
+}
+
+.contact_header {
+  height: 30%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-transform: uppercase;
+}
+
+.contact_input {
+  height: 2.5rem;
+  padding: .5rem;
+  margin: .2rem;
+}
+
+.contact_message {
+  margin: 5%;
+  height: 8rem;
+}
+
+.contact_email {
+  margin: 5%;
+}
+
+.contact_name, .contact_phone {
+  width: 45%;
+}
+
+.contact_subcol {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 15%;
+  padding-top: .5rem;
+}
+
+.contact_submit {
+  background: #c85a14;
+  color: white;
+  text-transform: uppercase;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin: 0 auto;
+  margin-top: 2.5%;
+  border-radius: 50%;
+  border: 1px solid black;
+  -webkit-box-shadow: 0 1px grey;
+          box-shadow: 0 1px grey;
+}
+
+.contact_submit:active {
+  background: pink;
+  -webkit-box-shadow: 0 2px maroon inset;
+          box-shadow: 0 2px maroon inset;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+.form-control{
+    display: none;
+}
+.simpleAdv{
+    display: block !important; 
+}
+.advanceSearch{
+    display: flex;
+}
+.col{
+    justify-content: space-around;
+    width: 60%;
+    
+}
+
+.search{
+    background: #efe;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

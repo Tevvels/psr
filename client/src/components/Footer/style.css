@@ -1,0 +1,14 @@
+.footer {
+  background: #020201;
+}
+
+.footer_list {
+  list-style: none;
+  color: #666;
+  padding: 5%;
+  height: 30vh;
+  text-align: left;
+  width: 50%;
+  margin-left: 5%;
+}
+/*# sourceMappingURL=style.css.map */
