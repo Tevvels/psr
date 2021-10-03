@@ -3,6 +3,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 10;
   background: #ffE;
   text-decoration: none;
 }
@@ -19,8 +20,10 @@
 }
 
 .nav_list {
+  position: fixed;
   padding-left: 15%;
   height: 3rem;
+  width: 100vw;
 }
 
 .nav_list-item {

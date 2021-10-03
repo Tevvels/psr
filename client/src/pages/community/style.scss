@@ -4,22 +4,31 @@
     justify-content: center;
     align-items: center;
     color:white;
-    list-style-type: none;
-    text-decoration: none;
-    background:tan;
-    width:50%;
-    &_arts,&_history{
-        float: left;
+    width: 75%;
+    overflow: hidden;
+
+    // &_arts,&_history{
+
+    //     float: left;
+    // }
+    &_sub{
+        display: flex;
+        list-style-type: none;
+        text-decoration: none;
+        background:tan;
+        
+
     }
-    &_rec{
-        float:right;
-    }
-    height: 20.5rem;
+    // &_rec{
+    //     float:right;
+    // }
 
 
     &_img{
-        height: 20.5rem;
-        width: 50%;
+       height: 50vh;
+       overflow: hidden;
+
     }
+
 
 }

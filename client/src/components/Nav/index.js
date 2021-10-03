@@ -12,9 +12,9 @@ const Nav = () => {
         <nav className={`nav`}>
            <ul className={` nav nav_list`}>
                 {menuData.map((item, index)=>(
-                    <Link className={ `nav  nav_button  nav_list-item nav_button-${item.title}`} to={item.link} key={index}>
+                    <a className={ `nav  nav_button  nav_list-item nav_button-${item.title}`} href={`#${item.link}`} key={index}>
                         {item.title}
-                    </Link>
+                    </a>
                 ))}
             </ul>
         </nav>

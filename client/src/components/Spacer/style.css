@@ -1,0 +1,15 @@
+.spacer {
+  height: 25rem;
+  width: 98.6vw;
+  background: yellow;
+  border-top: 1rem solid tan;
+  border-bottom: 1rem solid tan;
+  -webkit-transform: skew(0deg, -2deg);
+          transform: skew(0deg, -2deg);
+  -webkit-box-shadow: 1px 0 1rem black;
+          box-shadow: 1px 0 1rem black;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+/*# sourceMappingURL=style.css.map */

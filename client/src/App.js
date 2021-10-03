@@ -4,6 +4,7 @@ import Agent from './pages/agent';
 import About from './pages/about';
 import Search from './pages/search';
 import Splash from './components/Splash';
+import Spacer from './components/Spacer';
 import Community from './pages/community';
 import Nav from './components/Nav';
 import Contact from './pages/contact';
@@ -16,14 +17,18 @@ function App() {
       <Router>
         <Nav />
         <Route path={`/`} component={Splash} />
-        <Route exact path={`/`} component={About} />
+        <Route id={`About`} exact path={`/`} component={About} />
+        <Route path={`/`} component={Spacer} />
 
 
-        <Route path ={`/`} component={Contact} />
+        <Route exact path = {`/`} component = {Contact} />
 
-        <Route exact path ={`/agent`} component={Agent} />
-        <Route exact path ={`/community`} component={Community} />
-        <Route path={`/`} component={Footer}/>
+        <Route  exact path = {`/`} component = {Agent} />
+        <Route path={`/`} component={Spacer} />
+
+        <Route id={`Community`} exact path = {`/`} component = {Community} />
+
+        <Route exact path = {`/`} component = {Footer}/>
       </Router>
     </div>
   );

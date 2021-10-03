@@ -13,23 +13,21 @@
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  width: 75%;
+  overflow: hidden;
+}
+
+.community_sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   list-style-type: none;
   text-decoration: none;
   background: tan;
-  width: 50%;
-  height: 20.5rem;
-}
-
-.community_arts, .community_history {
-  float: left;
-}
-
-.community_rec {
-  float: right;
 }
 
 .community_img {
-  height: 20.5rem;
-  width: 50%;
+  height: 50vh;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

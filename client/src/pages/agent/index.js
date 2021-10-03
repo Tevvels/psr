@@ -15,9 +15,10 @@ const Agent = () => {
 
 
     return (
-        <div>
+        <div id={`Agent`}>
 
             <Container className={`agent`} fluid>
+                <h2>Meet our Agents</h2>
                 {agents.map((item,index) =>(
                     <Row key={index} className={`cols`}>
                         <Col xs={`auto`} className={`cols_subdivision `}>

@@ -1,6 +1,7 @@
 .nav {
     height: 100%;
     display: flex;
+    z-index: 10;
     background:#ffE;
     text-decoration:none;
     &_button{
@@ -16,8 +17,10 @@
 
 
     &_list{
+        position: fixed;
         padding-left: 15%;
         height: 3rem;
+        width: 100vw;
         &-item{
             text-transform: uppercase;
             padding: 5px;
