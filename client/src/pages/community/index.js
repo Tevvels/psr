@@ -10,24 +10,23 @@ const Community = () => {
     <>
             <h2>Our Community </h2>
 
-        <Container className={`community`}>
+        <Container className={`community`} id={`Community`}>
         {community.map((item,index)=>(
             <Row key={index} className={`community community_${item.ref}`}>
-                <Row >
-
-
-                  
+                <Row className={"community_row"} >
                     <Col className={` community_sub community_${item.ref}`}>
-                    <h2 className={`community_${item.ref} community_h2`}> {item.title}</h2>
-                {item.what.map((i,index)=>(
-                        <a key={index} className={`community_a`} href={i.link} target={`_blank`}>
-                            <p className={`community_p community_${item.ref}`} >{i.name}</p>
-                        </a>
-                ))}
-                </Col> 
-                <img className={`community_img community_${item.ref}-img`} src={stockminion}/>
-            </Row>    
-        </Row>              
+                        <h2 className={`community_${item.ref} community_h2`}> {item.title}</h2>
+                        {item.what.map((i,index)=>(
+                                <a key={index} className={`community_a`} href={i.link} target={`_blank`}>
+                                    <p className={`community_p community_${item.ref}`} >{i.name}</p>
+                                </a>
+                        ))}
+                     </Col> 
+                     <div className={`community_img`} >
+                        <img className={`community_img community_${item.ref}-img`} src={stockminion}/>
+                    </div>
+                </Row>    
+            </Row>              
             ))}
             {/* <Row>
                 <Col className={`community community_sub community_arts`}>

@@ -9,7 +9,10 @@
     box-shadow:  -.15rem 0 1rem black;
     height: 80vh;
     width: 25vw;
-
+    transition:  all .5s;
+    // &:hover{
+    //     // background: white;
+    // }
     &_header{
         height: 30%;
         width: 100%;
@@ -60,5 +63,54 @@
             background:pink;
             box-shadow: 0 2px maroon inset;
         }
+    }
+}
+
+
+
+.hide{
+    border: none;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    &:hover{
+        background: lightblue;
+        border: 1px solid gold;
+        color: white;
+    }
+
+
+
+}
+
+
+.hideContact{
+    transform: translateX(20rem);
+}
+
+.showButton{
+    transform: translate(-20rem,2rem);
+    background: white;
+    border-radius: 50%;
+    border:1px solid black;
+    height: 10rem;
+    width: 10rem;
+    &:hover{
+        font-size: 1.5rem;
+        height: 12.5rem;
+        width: 12.5rem;
+        
+
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .contact{
+        width: 100vw;
     }
 }

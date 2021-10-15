@@ -1,7 +1,7 @@
 .spacer {
-  height: 25rem;
+  height: 50vh;
   width: 98.6vw;
-  background: yellow;
+  background: #320d32;
   border-top: 1rem solid tan;
   border-bottom: 1rem solid tan;
   -webkit-transform: skew(0deg, -2deg);

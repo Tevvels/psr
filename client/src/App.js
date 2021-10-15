@@ -26,7 +26,7 @@ function App() {
         <Route  exact path = {`/`} component = {Agent} />
         <Route path={`/`} component={Spacer} />
 
-        <Route id={`Community`} exact path = {`/`} component = {Community} />
+        <Route  exact path = {`/`} component = {Community} />
 
         <Route exact path = {`/`} component = {Footer}/>
       </Router>

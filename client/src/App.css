@@ -1,7 +1,9 @@
 .App {
   text-align: center;
-  background:#C5283D;
+  background:#b2dffe;
   margin: 0 auto;
+  /* font-family: 'Ephesis', cursive; */
+font-family: 'Poppins', sans-serif;
 }
 
 

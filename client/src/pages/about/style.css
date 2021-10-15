@@ -1,7 +1,9 @@
 .about {
-  background: #fad532;
+  background: #b2dffe;
   height: 40%;
   display: block;
   padding: 5%;
+  color: white;
+  text-shadow: 0 0 .1rem black;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,25 @@
+things to improve
+
+the contact button makes the contact page dissaper when clicked. 
+have the mobile display work properly.
+
+the page needs breakpoints on all pieces
+
+the contact bar shrinks down and doesn't display as intended, need to update so that the element displays on the entire page. with the option to hide it. 
+
+the contact page font size for inputs must scale to so that the user can see all that they are typing. 
+
+
+the contact bar will be in the closed position when in mobile display as its default.
+
+the splash and spacers flow inside the app size which is only at 80 percent. barely readable
+
+the agent page covers the photo, font is to small and the element is larger then its parent. 
+
+the community page gets to small and the photos fall to the bottom of the element. 
+
+the footer doesnt cover the whole buttom and the info is falling out of it. 
+
+
+I need to get my buttons uniform. 
+I need to find my values and change them to percentages for Responsive design. 

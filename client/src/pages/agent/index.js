@@ -21,17 +21,16 @@ const Agent = () => {
                 <h2>Meet our Agents</h2>
                 {agents.map((item,index) =>(
                     <Row key={index} className={`cols`}>
-                        <Col xs={`auto`} className={`cols_subdivision `}>
-
-
-
-                            <Row>
+                        {/* <Col xs={`auto`} className={`cols_subdivision `}> */}
+                            {/* <Row> */}
+                            <img className={`cols_image`} src={stock_minion_confused}></img>
                                 <Col className={`cols_subColumn`}>
+
+
                                     <Row>
                                         <h2 className={`cols_name`}>{item.name}</h2>
                                     </Row>
                                     <Row>
-                                        <img className={`cols_image`} src={stock_minion_confused}></img>
                                     </Row>
                                     <Row>
                                     Email: <p className={`cols_contact`}>{item.contact.email}</p>
@@ -43,8 +42,8 @@ const Agent = () => {
                                     Office Phone:<p className={`cols_contact`}>{item.contact.office}</p>
                                     </Row>
                                 </Col>
-                            </Row>
-                        </Col>
+                            {/* </Row> */}
+                        {/* </Col> */}
 
                         <Col xs={`6`} className={`cols_desc`}>{item.desc}</Col>
                         

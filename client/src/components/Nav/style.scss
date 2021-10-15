@@ -19,8 +19,9 @@
     &_list{
         position: fixed;
         padding-left: 15%;
-        height: 3rem;
+        height: 8vh;
         width: 100vw;
+        align-items: center;
         &-item{
             text-transform: uppercase;
             padding: 5px;

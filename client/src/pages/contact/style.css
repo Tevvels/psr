@@ -15,6 +15,8 @@
           box-shadow: -.15rem 0 1rem black;
   height: 80vh;
   width: 25vw;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .contact_header {
@@ -81,5 +83,56 @@
   background: pink;
   -webkit-box-shadow: 0 2px maroon inset;
           box-shadow: 0 2px maroon inset;
+}
+
+.hide {
+  border: none;
+  height: 4rem;
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.hide:hover {
+  background: lightblue;
+  border: 1px solid gold;
+  color: white;
+}
+
+.hideContact {
+  -webkit-transform: translateX(20rem);
+          transform: translateX(20rem);
+}
+
+.showButton {
+  -webkit-transform: translate(-20rem, 2rem);
+          transform: translate(-20rem, 2rem);
+  background: white;
+  border-radius: 50%;
+  border: 1px solid black;
+  height: 10rem;
+  width: 10rem;
+}
+
+.showButton:hover {
+  font-size: 1.5rem;
+  height: 12.5rem;
+  width: 12.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    width: 100vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */
