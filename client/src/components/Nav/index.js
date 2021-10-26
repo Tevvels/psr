@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import {menuData} from '../../Data/NavData'
-import {Link} from 'react-router-dom';
 import './style.css' 
 const Nav = () => {
 

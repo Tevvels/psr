@@ -6,6 +6,14 @@
 font-family: 'Poppins', sans-serif;
 }
 
+:root{
+  --primary-color:#666;
+  --primary-color-dark:#222;
+  --primary-color-green:#444;
+  --primary-color-pink:#999;
+  --primary-color-red:#ccc;
+
+}
 
 .App-logo {
   height: 40vmin;

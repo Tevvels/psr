@@ -12,7 +12,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  color: var(--primary-color-pink);
   width: 75%;
   overflow: hidden;
 }
@@ -27,14 +27,14 @@
           flex-direction: column;
   list-style-type: none;
   text-decoration: none;
-  background: tan;
+  background: var(--primary-color);
 }
 
 .community_img {
   max-width: 50%;
   overflow: hidden;
   padding: 5%;
-  background: #eff;
+  background: var(--primary-color-red);
 }
 
 .community_row {

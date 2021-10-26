@@ -1,59 +1,77 @@
 import React from 'react'
-// import Card from '../../components/Card'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card,ListGroup, ListGroupItem, CardGroup} from 'react-bootstrap';
-import { Alert,Container, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 import {agents} from "../../Data/agentData";
 import "../agent/style.css";
-import stock_minion from "../../Data/photos/stock_minion.jpg";
 import stock_minion_confused from "../../Data/photos/stock_minion_confused.jpeg";
 const house = require('../../Data/houseData.json')
 const Agent = () => {
+let agentValue = 0;
 
+const Toggle = (a) => {
+    agentValue = a;
+
+    let desc = document.querySelector('.agents_desc');
+    desc.innerHTML =  `                
+    <img class="agents_desc-img"></img>
+    <div class="flex_column">
+        <h2 class="agents_desc-header">${agents[agentValue].name} </h2>
+        <div class="flex_row agents_desc-contact">
+            <div class="agents_desc-email">${agents[agentValue].contact.email}</div>
+            <div class="agents_desc-cell">${agents[agentValue].contact.cell}</div>
+            <div class="agents_desc-img">${agents[agentValue].name}</div>
+    </div>
+    <div class="agents_desc-content">${agents[agentValue].desc}</div>
+    </div>
+
+`
+
+ 
+
+
+}
 
 
 
 
     return (
-        <div id={`Agent`}>
+        <div className={`agents`} id={`Agent`}>
+            
+            
+            <h2 className={`hd-primary-400`}>Meet our Agents</h2>
+            
+            <div className={`agents_desc`}>
 
-            <Container className={`agent`} fluid>
-                <h2>Meet our Agents</h2>
+            </div>    
+
+                <div className={`flex_row  agents_container`}>
                 {agents.map((item,index) =>(
-                    <Row key={index} className={`cols`}>
-                        {/* <Col xs={`auto`} className={`cols_subdivision `}> */}
-                            {/* <Row> */}
-                            <img className={`cols_image`} src={stock_minion_confused}></img>
-                                <Col className={`cols_subColumn`}>
+                    <div  key={index} className={`agents_agent`} onClick={()=>(
+                        Toggle(index),
+                        console.log(agentValue)
+                    )}>
+                        
+                            <div>
+                            <img  className={`agents_img`} src={stock_minion_confused}></img>
+                            </div>
+                                <div className={`agents_contact`}>
+                                        <h2 className={`agents_contact-name`}>{item.name}</h2>
 
+                                    <p className={`agents_contact-email`}>     
+                                    Email: {item.contact.email}</p>
+                                    
+                                    <p className={`agents_contact-cell`}>
+                                    Cell: {item.contact.cell}</p>
 
-                                    <Row>
-                                        <h2 className={`cols_name`}>{item.name}</h2>
-                                    </Row>
-                                    <Row>
-                                    </Row>
-                                    <Row>
-                                    Email: <p className={`cols_contact`}>{item.contact.email}</p>
-                                    </Row>
-                                    <Row>
-                                    Cell: <p className={`cols_contact`}>{item.contact.cell}</p>
-                                    </Row>
-                                    <Row>
-                                    Office Phone:<p className={`cols_contact`}>{item.contact.office}</p>
-                                    </Row>
-                                </Col>
-                            {/* </Row> */}
+                                </div>
+                            {/* </div> */}
                         {/* </Col> */}
 
-                        <Col xs={`6`} className={`cols_desc`}>{item.desc}</Col>
+                        {/* <div xs={`6`} className={`cols_desc`}>{item.desc}</div> */}
                         
-                    </Row>
+                    </div>
                 ))}
-            </Container>
-
-
-
-
+                </div>
         </div>
 
     )

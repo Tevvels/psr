@@ -23,3 +23,7 @@ the footer doesnt cover the whole buttom and the info is falling out of it.
 
 I need to get my buttons uniform. 
 I need to find my values and change them to percentages for Responsive design. 
+
+
+on the community page there is a community profile page that has stats on the latest information for Ashland. 
+

@@ -1,13 +1,13 @@
 .spacer {
   height: 50vh;
   width: 98.6vw;
-  background: #320d32;
-  border-top: 1rem solid tan;
-  border-bottom: 1rem solid tan;
+  background: var(--primary-color-dark);
+  border-top: 1rem solid var(--primary-color-pink);
+  border-bottom: 1rem solid var(--primary-color-pink);
   -webkit-transform: skew(0deg, -2deg);
           transform: skew(0deg, -2deg);
-  -webkit-box-shadow: 1px 0 1rem black;
-          box-shadow: 1px 0 1rem black;
+  -webkit-box-shadow: 1px 0 1rem var(--primary-color-dark);
+          box-shadow: 1px 0 1rem var(--primary-color-dark);
   margin: 0 auto;
   margin-bottom: 4rem;
   margin-top: 4rem;

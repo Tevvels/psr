@@ -1,10 +1,10 @@
 .footer {
-  background: #020201;
+  background: var(--primary-color-dark);
 }
 
 .footer_list {
   list-style: none;
-  color: #666;
+  color: var(--primary-color-red);
   padding: 5%;
   height: 30vh;
   text-align: left;

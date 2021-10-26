@@ -18,5 +18,10 @@ export const agents =[
         name:"Agent Three",
         desc:"something about the agent, details so on and so forth this is a longer one to be longer and longer than before",
         contact:"how to get ahol of them?"
+    },
+    {
+        name:"Agent Four",
+        desc:"something about the agent, details so on and so forth this is a longer one to be longer and longer than before",
+        contact:"how to get ahol of them?"
     }
 ]
